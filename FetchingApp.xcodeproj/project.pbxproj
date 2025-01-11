@@ -14,7 +14,7 @@
 		D2D805862D32B84A002367FF /* Exceptions for "FetchingApp" folder in "FetchingApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = D2D805732D32B849002367FF /* FetchingApp */;
 		};
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MB84K2JPJV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FetchingApp/Info.plist;
+				INFOPLIST_FILE = FetchingApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -175,7 +175,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MB84K2JPJV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FetchingApp/Info.plist;
+				INFOPLIST_FILE = FetchingApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
