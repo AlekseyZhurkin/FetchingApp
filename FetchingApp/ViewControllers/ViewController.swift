@@ -7,31 +7,65 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class ViewController: UITableViewController {
+    // MARK: - Private Properties
+    private var symbols: [Symbol] = []
+    private let networkManager = NetworkManager.shared
+    
     // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 100
         fetchMarketCap()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let infoVC = segue.destination as? InfoViewController
+        infoVC?.symbol = sender as? Symbol
     }
 }
 
 // MARK: - Networking
 extension ViewController {
     private func fetchMarketCap() {
-        guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false") else { return }
+        networkManager.fetch([Symbol].self, from: Link.api.url) { [unowned self] result in
+            switch result {
+            case .success(let symbols):
+                self.symbols = symbols
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension ViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        symbols.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "symbolCell", for: indexPath)
+        guard let cell = cell as? SymbolCell else { return UITableViewCell() }
         
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
-            guard let data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do{
-                let symbols = try JSONDecoder().decode([Symbol].self, from: data)
-                print(symbols)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }.resume()
+        let symbol = symbols[indexPath.row]
+        cell.configure(with: symbol)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let symbol = symbols[indexPath.row]
+        performSegue(withIdentifier: "showInfo", sender: symbol)
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        .none
+    }
+    
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        false
     }
 }
