@@ -15,6 +15,7 @@ final class SymbolsViewController: UITableViewController {
     // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.rowHeight = 100
         fetchMarketCap()
     }

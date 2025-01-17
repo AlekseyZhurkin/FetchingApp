@@ -19,6 +19,7 @@ final class InfoViewController: UIViewController {
     @IBOutlet weak var low24Label: UILabel!
     @IBOutlet weak var changeLabel: UILabel!
     @IBOutlet weak var changePercentLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Public Properties
     var symbol: Symbol!
@@ -29,6 +30,10 @@ final class InfoViewController: UIViewController {
     // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        
         getImage()
         showInfo(for: symbol)
     }
@@ -60,15 +65,14 @@ private extension InfoViewController {
             "$" + String(format: "%.02f", symbol.priceChange) :
             "$" + String(format: "%.05f", symbol.priceChange)
         
-        changePercentLabel.text = symbol.currentPrice >= 1 ? 
-            String(format: "%.02f", symbol.pricePercentage) + "%" :
-            String(format: "%.05f", symbol.pricePercentage) + "%"
+        changePercentLabel.text = String(format: "%.02f", symbol.pricePercentage) + "%"
     }
     
     func getImage() {
         networkManager.fetchImage(from: symbol.imageURL) { [unowned self] result in
             switch result {
             case .success(let imageData):
+                activityIndicator.stopAnimating()
                 imageView.image = UIImage(data: imageData)
                 imageView.setImageStyle()
             case .failure(let error):

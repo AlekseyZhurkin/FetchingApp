@@ -62,6 +62,9 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="pcT-2p-vl5"/>
                                             </constraints>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xvO-MG-o1f">
+                                            <rect key="frame" x="43" y="40" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="C1i-Hh-lU6" firstAttribute="leading" secondItem="uVR-wn-bal" secondAttribute="leading" constant="8" id="2Nx-J2-rrm"/>
@@ -69,9 +72,12 @@
                                         <constraint firstItem="yua-C2-lth" firstAttribute="top" secondItem="uVR-wn-bal" secondAttribute="top" constant="10" id="efh-VN-h0l"/>
                                         <constraint firstItem="C1i-Hh-lU6" firstAttribute="top" secondItem="uVR-wn-bal" secondAttribute="top" constant="5" id="pwj-eL-1qg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yua-C2-lth" secondAttribute="trailing" constant="20" id="r7X-Ta-dh2"/>
+                                        <constraint firstItem="xvO-MG-o1f" firstAttribute="centerY" secondItem="C1i-Hh-lU6" secondAttribute="centerY" id="utj-Ps-9vR"/>
+                                        <constraint firstItem="xvO-MG-o1f" firstAttribute="centerX" secondItem="C1i-Hh-lU6" secondAttribute="centerX" id="zA2-RL-hJZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="xvO-MG-o1f" id="x6c-wT-gnk"/>
                                     <outlet property="marketCapRankLabel" destination="y70-9Y-cjc" id="QzB-cC-ulX"/>
                                     <outlet property="pricePercentLabel" destination="tro-KZ-Aj2" id="ftc-QZ-hhw"/>
                                     <outlet property="symbolImage" destination="C1i-Hh-lU6" id="et1-sS-7hW"/>
@@ -108,7 +114,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gZd-nv-eYJ">
-                                <rect key="frame" x="20" y="20" width="400" height="40.666666666666657"/>
+                                <rect key="frame" x="20" y="19.999999999999996" width="400" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -227,6 +233,9 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4mb-KY-TeV">
+                                <rect key="frame" x="210" y="190.66666666666666" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nhq-G1-rWx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -239,10 +248,13 @@
                             <constraint firstItem="RC3-El-um9" firstAttribute="top" secondItem="jJ8-bg-wSj" secondAttribute="bottom" constant="30" id="MYn-GW-T5w"/>
                             <constraint firstItem="RC3-El-um9" firstAttribute="centerX" secondItem="hJi-H9-W4c" secondAttribute="centerX" id="Phg-5E-wiy"/>
                             <constraint firstItem="nhq-G1-rWx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gZd-nv-eYJ" secondAttribute="trailing" id="PqX-cc-XK6"/>
+                            <constraint firstItem="4mb-KY-TeV" firstAttribute="centerX" secondItem="jJ8-bg-wSj" secondAttribute="centerX" id="cIg-rU-LeX"/>
                             <constraint firstItem="gZd-nv-eYJ" firstAttribute="centerX" secondItem="hJi-H9-W4c" secondAttribute="centerX" id="im0-Sd-GD6"/>
+                            <constraint firstItem="4mb-KY-TeV" firstAttribute="centerY" secondItem="jJ8-bg-wSj" secondAttribute="centerY" id="u0K-TI-VZN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="4mb-KY-TeV" id="qG7-7J-wkx"/>
                         <outlet property="changeLabel" destination="Um8-g9-vYw" id="nTJ-IN-chC"/>
                         <outlet property="changePercentLabel" destination="acq-dQ-rMk" id="kUP-lh-FFZ"/>
                         <outlet property="high24Label" destination="k7w-Tm-nnP" id="bJf-ac-EVV"/>

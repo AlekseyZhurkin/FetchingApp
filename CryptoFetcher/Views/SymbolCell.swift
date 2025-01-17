@@ -14,6 +14,7 @@ final class SymbolCell: UITableViewCell {
     @IBOutlet var symbolPriceLabel: UILabel!
     @IBOutlet var marketCapRankLabel: UILabel!
     @IBOutlet var pricePercentLabel: UILabel!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Private Properties
     private let networkManager = NetworkManager.shared
@@ -27,13 +28,15 @@ extension SymbolCell {
         symbolPriceLabel.text = symbol.currentPrice >= 1 ?
             "$" + String(format: "%.02f", symbol.currentPrice) :
             "$" + String(format: "%.05f", symbol.currentPrice)
-        pricePercentLabel.text = symbol.currentPrice >= 1 ? 
-            String(format: "%.02f", symbol.pricePercentage) + "%" :
-            String(format: "%.05f", symbol.pricePercentage) + "%"
+        pricePercentLabel.text = String(format: "%.02f", symbol.pricePercentage) + "%"
+        
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         
         networkManager.fetchImage(from: symbol.imageURL) { [unowned self] result in
             switch result {
             case .success(let imageData):
+                activityIndicator.stopAnimating()
                 symbolImage.image = UIImage(data: imageData)
                 symbolImage.setImageStyle()
             case .failure(let error):
