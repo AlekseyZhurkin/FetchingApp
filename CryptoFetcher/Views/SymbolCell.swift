@@ -35,7 +35,7 @@ extension SymbolCell {
             switch result {
             case .success(let imageData):
                 symbolImage.image = UIImage(data: imageData)
-                setImageStyle(image: symbolImage)
+                symbolImage.setImageStyle()
             case .failure(let error):
                 print(error)
             }

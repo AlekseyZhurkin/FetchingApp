@@ -70,7 +70,7 @@ private extension InfoViewController {
             switch result {
             case .success(let imageData):
                 imageView.image = UIImage(data: imageData)
-                setImageStyle(image: imageView)
+                imageView.setImageStyle()
             case .failure(let error):
                 print(error)
             }

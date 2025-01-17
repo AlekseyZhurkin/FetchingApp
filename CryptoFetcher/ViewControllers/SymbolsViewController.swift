@@ -20,8 +20,9 @@ final class SymbolsViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let infoVC = segue.destination as? InfoViewController
-        infoVC?.symbol = sender as? Symbol
+        infoVC?.symbol = symbols[indexPath.row]
     }
 }
 
@@ -54,11 +55,6 @@ extension SymbolsViewController {
         cell.configure(with: symbol)
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let symbol = symbols[indexPath.row]
-        performSegue(withIdentifier: "showInfo", sender: symbol)
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
