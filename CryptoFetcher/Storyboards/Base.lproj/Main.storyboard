@@ -11,13 +11,13 @@
         <!--Top 100 Market Cap-->
         <scene sceneID="xF4-gR-qpR">
             <objects>
-                <tableViewController id="puJ-3X-jvj" customClass="ViewController" customModule="FetchingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="puJ-3X-jvj" customClass="SymbolsViewController" customModule="CryptoFetcher" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Z7J-E2-0DD">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="symbolCell" rowHeight="100" id="1la-mA-SjD" customClass="SymbolCell" customModule="FetchingApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="symbolCell" rowHeight="100" id="1la-mA-SjD" customClass="SymbolCell" customModule="CryptoFetcher" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="440" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1la-mA-SjD" id="uVR-wn-bal">
@@ -97,7 +97,7 @@
         <!--Info View Controller-->
         <scene sceneID="TRE-Yp-Qdh">
             <objects>
-                <viewController id="Npf-jb-lI1" customClass="InfoViewController" customModule="FetchingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Npf-jb-lI1" customClass="InfoViewController" customModule="CryptoFetcher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJi-H9-W4c">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

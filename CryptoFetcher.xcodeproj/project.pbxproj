@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		D2D805742D32B849002367FF /* FetchingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D805742D32B849002367FF /* CryptoFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D2D805862D32B84A002367FF /* Exceptions for "FetchingApp" folder in "FetchingApp" target */ = {
+		D2D805862D32B84A002367FF /* Exceptions for "CryptoFetcher" folder in "CryptoFetcher" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/Info.plist,
 			);
-			target = D2D805732D32B849002367FF /* FetchingApp */;
+			target = D2D805732D32B849002367FF /* CryptoFetcher */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D2D805762D32B849002367FF /* FetchingApp */ = {
+		D2D805762D32B849002367FF /* CryptoFetcher */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D2D805862D32B84A002367FF /* Exceptions for "FetchingApp" folder in "FetchingApp" target */,
+				D2D805862D32B84A002367FF /* Exceptions for "CryptoFetcher" folder in "CryptoFetcher" target */,
 			);
-			path = FetchingApp;
+			path = CryptoFetcher;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -45,7 +45,7 @@
 		D2D8056B2D32B849002367FF = {
 			isa = PBXGroup;
 			children = (
-				D2D805762D32B849002367FF /* FetchingApp */,
+				D2D805762D32B849002367FF /* CryptoFetcher */,
 				D2D805752D32B849002367FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 		D2D805752D32B849002367FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2D805742D32B849002367FF /* FetchingApp.app */,
+				D2D805742D32B849002367FF /* CryptoFetcher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D2D805732D32B849002367FF /* FetchingApp */ = {
+		D2D805732D32B849002367FF /* CryptoFetcher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2D805872D32B84A002367FF /* Build configuration list for PBXNativeTarget "FetchingApp" */;
+			buildConfigurationList = D2D805872D32B84A002367FF /* Build configuration list for PBXNativeTarget "CryptoFetcher" */;
 			buildPhases = (
 				D2D805702D32B849002367FF /* Sources */,
 				D2D805712D32B849002367FF /* Frameworks */,
@@ -74,13 +74,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D2D805762D32B849002367FF /* FetchingApp */,
+				D2D805762D32B849002367FF /* CryptoFetcher */,
 			);
-			name = FetchingApp;
+			name = CryptoFetcher;
 			packageProductDependencies = (
 			);
 			productName = FetchingApp;
-			productReference = D2D805742D32B849002367FF /* FetchingApp.app */;
+			productReference = D2D805742D32B849002367FF /* CryptoFetcher.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D2D8056F2D32B849002367FF /* Build configuration list for PBXProject "FetchingApp" */;
+			buildConfigurationList = D2D8056F2D32B849002367FF /* Build configuration list for PBXProject "CryptoFetcher" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2D805732D32B849002367FF /* FetchingApp */,
+				D2D805732D32B849002367FF /* CryptoFetcher */,
 			);
 		};
 /* End PBXProject section */
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MB84K2JPJV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FetchingApp/App/Info.plist;
+				INFOPLIST_FILE = /Users/zhurkin/Apps/Homework/CryptoFetcher/CryptoFetcher/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Crypto Fetcher";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -160,7 +160,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = zhurkin.FetchingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = zhurkin.CryptoFetcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -181,7 +181,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MB84K2JPJV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FetchingApp/App/Info.plist;
+				INFOPLIST_FILE = /Users/zhurkin/Apps/Homework/CryptoFetcher/CryptoFetcher/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Crypto Fetcher";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -194,7 +194,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = zhurkin.FetchingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = zhurkin.CryptoFetcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -258,6 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = /Users/zhurkin/Apps/Homework/CryptoFetcher/CryptoFetcher/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -315,6 +316,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = /Users/zhurkin/Apps/Homework/CryptoFetcher/CryptoFetcher/App/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -328,7 +331,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D2D8056F2D32B849002367FF /* Build configuration list for PBXProject "FetchingApp" */ = {
+		D2D8056F2D32B849002367FF /* Build configuration list for PBXProject "CryptoFetcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2D8058A2D32B84A002367FF /* Debug */,
@@ -337,7 +340,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2D805872D32B84A002367FF /* Build configuration list for PBXNativeTarget "FetchingApp" */ = {
+		D2D805872D32B84A002367FF /* Build configuration list for PBXNativeTarget "CryptoFetcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2D805882D32B84A002367FF /* Debug */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UITableViewController {
+final class SymbolsViewController: UITableViewController {
     // MARK: - Private Properties
     private var symbols: [Symbol] = []
     private let networkManager = NetworkManager.shared
@@ -26,7 +26,7 @@ final class ViewController: UITableViewController {
 }
 
 // MARK: - Networking
-extension ViewController {
+extension SymbolsViewController {
     private func fetchMarketCap() {
         networkManager.fetch([Symbol].self, from: Link.api.url) { [unowned self] result in
             switch result {
@@ -41,7 +41,7 @@ extension ViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension ViewController {
+extension SymbolsViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         symbols.count
     }
