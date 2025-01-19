@@ -30,11 +30,11 @@ final class SymbolsViewController: UITableViewController {
 // MARK: - Networking
 extension SymbolsViewController {
     private func fetchMarketCap() {
-        networkManager.fetch([Symbol].self, from: Link.api.url) { [unowned self] result in
+        networkManager.fetch(from: Link.api.url.absoluteString) { [unowned self] result in
             switch result {
             case .success(let symbols):
                 self.symbols = symbols
-                self.tableView.reloadData()
+                tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
